@@ -93,17 +93,7 @@ console.log(`Cember alani : ${CemberinAlani(15)}`)
 		💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
 */
 
-let enBuyuk = sayilar[0];
-let enKucuk = sayilar[0]
-for(let i = 0; i<sayilar.length;i++){
-  if(sayilar[i]>enBuyuk){
-    enBuyuk = sayilar[i]
-  }else if(sayilar[i] < enKucuk){
-    enKucuk = sayilar[i]
-  } 
 
-}
-console.log(enBuyuk,enKucuk)
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let ucetambolunenler,
@@ -116,27 +106,41 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+enbuyuk = sayilar[0];
+enkucuk = sayilar[0]
+for(let i = 0; i<sayilar.length;i++){
+  if(sayilar[i]>enbuyuk){
+    enbuyuk = sayilar[i]
+  }else if(sayilar[i] < enkucuk){
+    enkucuk = sayilar[i]
+  } 
+
+}
 
 // 3b çözümü:
 
-/* kodlar buraya */
-
+ucetambolunenler = []
+sayilar.forEach((sayi) => {sayi%3 === 0 && ucetambolunenler.push(sayi)} )
+//console.log(ucetambolunenler)
 // 3c çözümü:
 
-/* kodlar buraya */
-
+ucebolunenlerintoplami = ucetambolunenler.reduce((acc,currentValue) => acc + currentValue,0)
+//console.log(`ucebolunenlerintoplami : ${ucebolunenlerintoplami}`)
 // 3d çözümü
 
-/* kodlar buraya */
-
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi<500 )
 // 3e çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar.sort((a,b) => a-b);
 
 // 3f çözümü
 
-/* kodlar buraya */
+
+
+
+
+
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
